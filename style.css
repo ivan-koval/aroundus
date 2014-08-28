@@ -1,0 +1,41 @@
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+div {
+    /*border: 1px solid red;*/
+}
+.menu11 a {
+    width: 174px;
+    display: block;
+    text-align: center;
+}
+.logo {
+    background: url('/img/4415.jpg') no-repeat;
+    height: 300px;
+    background-size: contain;
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:40px;
+}
+.letters .col-xs-4{
+
+}
+.logo a{
+    margin-top: 15px;
+    margin-left: -250px;
+    display: block;
+    color: #F5DA14;
+    font-size: 40px;
+}
+.logo img{
+    margin-right: 25px;
+}
+.letters{
+
+}
+ul > li:last-child {
+    color: red;
+}
+ul li:first-child {
+    color: green;
+}
