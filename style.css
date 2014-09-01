@@ -17,9 +17,6 @@ div {
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:40px;
 }
-.letters .col-xs-4{
-
-}
 .logo a{
     margin-top: 15px;
     margin-left: -250px;
@@ -30,12 +27,10 @@ div {
 .logo img{
     margin-right: 25px;
 }
-.letters{
-
-}
-ul > li:last-child {
-    color: red;
-}
-ul li:first-child {
-    color: green;
+.header {
+    background: url('/img/4415.jpg') no-repeat;
+    height: 100px;
+    background-size: contain;
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:40px;
 }

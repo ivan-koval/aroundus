@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
+<!--[if lt IE 7]>
+<html lang="ua" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="ua" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="ua" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ua" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Around Us</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
-
-    <!-- Optional theme -->
-    <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
-    <ul>
-        <li>1</li>
-        <li>3</li>
-        <li class="test test2">
-            <div>
-                <div>
-                    <ul>
-                        <li>
-                            sdf
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li id="test">
-            <ul>
-                <li>lsjdfl</li>
-                <li>lsjdfl</li>
-                <li>lsjdfl</li>
+<body style="background-color: light-blue">
+<div class="container">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Around Us</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/#/nicola">Хто такий Миколай?</a></li>
+                <li><a href="#">Link</a></li>
+
             </ul>
-        </li>
-        <li>1asdfsdf5</li>
-    </ul>
-    <p class="test test2">test</p>
-    <div>test</div>
-    <input type="text" class="form-control">
-    <input type="password" class="form-control">
-    <input type="checkbox">
-    <input name='test_radio' type="radio">sdf
-    <br>
-    <input name='test_radio' type="radio">dfg<br>
-    <input name='test_radio' type="radio">ty<br>
-    <input name='test_radio' class="btn btn-danger" type="button" value="test">ty<br>
+            <!--<form class="navbar-form navbar-left" role="search">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            <!--</form>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">Link</a></li>-->
+            <!--</ul>-->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
+<div ng-view></div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="js/app.js"></script>
+<!--<script src="view1/view1.js"></script>-->
+<!--<script src="view2/view2.js"></script>-->
+<!--<script src="components/version/version.js"></script>-->
+<!--<script src="components/version/version-directive.js"></script>-->
+<!--<script src="components/version/interpolate-filter.js"></script>-->
 </body>
 </html>
