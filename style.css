@@ -1,14 +1,6 @@
 .container {
-    max-width: 900px;
+    max-width: 920px;
     margin: auto;
-}
-div {
-    /*border: 1px solid red;*/
-}
-.menu11 a {
-    width: 174px;
-    display: block;
-    text-align: center;
 }
 .logo {
     background: url('/img/4415.jpg') no-repeat;
@@ -33,4 +25,9 @@ div {
     background-size: contain;
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:40px;
+}
+.letters{
+    font-size: 12px;
+    margin-left: 0px;
+    padding-left: 0px;
 }

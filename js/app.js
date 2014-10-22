@@ -14,6 +14,21 @@ config(['$routeProvider', function($routeProvider) {
   })
   .when('/nicola', {
       templateUrl: 'views/nicola.html'
+  }).when('/nicola_around', {
+      templateUrl: 'views/nicola_around.html'
   })
+  .when('/gift', {
+      templateUrl: 'views/gift.html'
+  })
+  .when('/action', {
+      templateUrl: 'views/action.html'
+  })
+  .when('/letters', {
+      templateUrl: 'views/letters.html'
+  })
+      .when('/give_gift', {
+     templateUrl: 'views/give_gift.html'
+      })
+
   .otherwise({redirectTo: '/'});
 }]);
