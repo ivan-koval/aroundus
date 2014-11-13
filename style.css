@@ -1,3 +1,6 @@
+p {
+    text-indent: 20px
+}
 .container {
     max-width: 920px;
     margin: auto;
@@ -26,8 +29,29 @@
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:40px;
 }
-.letters{
+.letters_list .thumbnail img{
+    height: 150px;
+}
+.letters_list .thumbnail .caption p{
     font-size: 12px;
-    margin-left: 0px;
-    padding-left: 0px;
+    height: 140px;
+}
+.letter {
+    background-image: url('/img/letter_bg.png');
+    height: 320px;
+    background-size: 313px 320px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+}
+.letter.lots_of_text{
+    font-size: 13px;
+}
+.text_about{
+    font-style: italic;
+    align: justify;
+
+}
+.letters {
+  /*font-size: 11px;*/
+    font-style: italic;
 }
