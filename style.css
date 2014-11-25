@@ -29,6 +29,9 @@ p {
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:40px;
 }
+.header_my{
+    text-align:justify;
+}
 .letters_list .thumbnail img{
     height: 150px;
 }
@@ -44,7 +47,12 @@ p {
     margin-bottom: 30px;
 }
 .letter.lots_of_text{
-    font-size: 13px;
+    font-size: 13px;}
+.letter.lots_very_of_text{
+    font-size: 11px;
+}
+.letter.lots_verys_of_text{
+    font-size: 9px;
 }
 .text_about{
     font-style: italic;
@@ -54,4 +62,9 @@ p {
 .letters {
   /*font-size: 11px;*/
     font-style: italic;
+}
+.new{
+    font-size: 10px;
+    font-style: italic;
+    text-align: justify
 }
