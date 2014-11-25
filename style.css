@@ -45,11 +45,16 @@ p {
     background-size: 313px 320px;
     padding: 30px 40px;
     margin-bottom: 30px;
+    position: relative;
 }
 .letter.lots_of_text{
     font-size: 13px;}
-.letter.lots_very_of_text{
-    font-size: 11px;
+.letter .read-more{
+    text-decoration: underline;
+    position: absolute;
+    right: 30px;
+    bottom: 8px;
+    cursor: pointer;
 }
 .letter.lots_verys_of_text{
     font-size: 9px;

@@ -1,0 +1,20 @@
+<div class="page-header" align="center">
+    <div class="row">
+        <div class="col-xs-3">
+            <img width="100" alt="Емблема" src="/img/4415.jpg" border="0">
+        </div>
+        <div class="col-xs-9">
+            <h1>Листи з канцелярії Святого Миколая
+                <small> {{ years }} р.</small>
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="letters ">
+    <div class="row">
+        <div ng-repeat='letter in letters' class="col-sm-4 text-justify letter">
+            {{ letter.text.replace('\n', ' ').substr(0, 350) }}{{ letter.text.length > 350 ? '...' : '' }}
+            <div ng-show='letter.text.length > 350' ng-click='readMore(letter.text)' class="read-more">Читати все</div>
+        </div>
+    </div>
+</div>

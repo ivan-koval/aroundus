@@ -2,7 +2,11 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'myApp.aroundUsServices',
+    'myApp.lettersByYear',
+    'myApp.letters',
     //'myApp.view1',
     //'myApp.view2',
     //'myApp.version'
@@ -24,9 +28,9 @@ angular.module('myApp', [
             .when('/action', {
                 templateUrl: 'views/action.html'
             })
-            .when('/letters', {
-                templateUrl: 'views/letters.html'
-            })
+            //.when('/letters', {
+            //    templateUrl: 'views/letters.html'
+            //})
             .when('/give_gift', {
                 templateUrl: 'views/give_gift.html'
             })
