@@ -14,11 +14,11 @@ angular.module('myApp.signUp', [/*special components here*/])
     console.log('we are in main controller');
 
     $scope.user = {
-      first_name: "Ivan",
-      last_name: "Koval",
-      email: "i@vk.com",
-      phone: "3444444",
-      password: "qwer"
+      //first_name: "Ivan",
+      //last_name: "Koval",
+      //email: "i@vk.com",
+      //phone: "3444444",
+      //password: "qwer"
     };
 
     $scope.facebookSignUp = function() {
