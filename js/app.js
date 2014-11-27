@@ -6,12 +6,29 @@ angular.module('myApp', [
     'ui.bootstrap',
     'myApp.aroundUsServices',
     'myApp.lettersByYear',
+    'myApp.main',
+    'myApp.login',
+    'myApp.signUp',
     'myApp.letters',
     //'myApp.view1',
     //'myApp.view2',
     //'myApp.version'
 ]).
-    config(['$routeProvider', function ($routeProvider) {
+    config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+
+        $httpProvider.interceptors.push(function($q, $rootScope) {
+          return {
+            'responseError': function(rejection) {
+              if (rejection.status == 401) {
+                delete $rootScope.user;
+                console.log('we need to open login popup');
+              }
+              return $q.reject(rejection);
+            }
+          };
+        });
+        $httpProvider.defaults.withCredentials = true;
+
         $routeProvider
             .when('/', {
                 templateUrl: 'views/homepage.html'
@@ -99,4 +116,34 @@ angular.module('myApp', [
             })
             .otherwise({redirectTo: '/'}
         );
-    }]);
+    }])
+  .run(['$rootScope', 'AroundUsService', function ($rootScope, AroundUsService) {
+    AroundUsService.checkLoginStatus();
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '735642403192009',
+        xfbml      : true,
+        version    : 'v2.1'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    //    $scope.$on('modal-shown', function() {});
+
+    //    $rootScope.$on('ngDialog.opened', function (e, $dialog) {
+    //      // move doctor-profile dialog left on 540px
+    //      if ($dialog[0].className.indexOf('ngdialog-doctorprofile') > -1) {
+    //        var connector = document.getElementsByClassName('connector')[0];
+    //        var dialog = document.getElementsByClassName('gm-modal-body')[0];
+    //        dialog.style.left = (connector.getBoundingClientRect().left - 540) + 'px';
+    //      }
+    //    });
+  }]);

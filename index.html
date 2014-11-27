@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css"/>
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body ng-controller="MainCtrl">
 <div class="container">
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
@@ -37,10 +38,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/#/nicola">Хто такий Миколай?</a></li>
-                <li><a href="/#/nicola_around">Миколай по всьому світі</a></li>
+                <li><a href="/#/nicola_around">Миколай у світі</a></li>
                 <li><a href="/#/gift">Вибрати лист</a> </li>
-                <li><a href="/#/action">Заходи, акції</a> </li>
-                <li><a href="/#/letters">Архів листів</a> </li>
+                <!--<li><a href="/#/action">Заходи, акції</a> </li>-->
+                <li><a href="/#/letters">Архів листів</a></li>
+                <li><a ng-show='!user' ng-click="login()">Увійти</a></li>
+                <li><a ng-show='!user' ng-click="signUp()">Р</a></li>
+                <li><a ng-show='user' ng-click="logout()">Вийти</a></li>
             </ul>
           </div>
     </div>
@@ -72,6 +76,9 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
+<script src="js/controllers/main_ctrl.js"></script>
+<script src="js/controllers/login_ctrl.js"></script>
+<script src="js/controllers/signup_ctrl.js"></script>
 <script src="js/controllers/letters_by_year.js"></script>
 <script src="js/controllers/letters_ctrl.js"></script>
 </body>

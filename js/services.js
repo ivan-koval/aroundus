@@ -1,18 +1,16 @@
 var aroundUsServices = angular.module('myApp.aroundUsServices', []);
-var endpoint = 'http://aroundus-api.vakoms.com';
-//var endpoint = 'http://localhost:8080';
+//var endpoint = 'http://aroundus-api.vakoms.com';
+var endpoint = 'http://localhost:8080';
 //var endpoint = 'http://91.237.240.22:8080';
 
 aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
   function getLetters(years, success, error) {
     $http.post(endpoint + '/letters', {"years": years}).success(success).error(error);
   }
-  function register(type, user, success, error) {
-    user.type = type;
+  function register(user, success, error) {
     $http.post(endpoint + '/register', user).success(success).error(error);
   }
-  function facebookRegister(type, user, success, error) {
-    user.type = type;
+  function facebookRegister(user, success, error) {
     $http.post(endpoint + '/fb_register', user).success(success).error(error);
   }
   function facebookLogin(user, success, error) {
