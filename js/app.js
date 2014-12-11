@@ -10,6 +10,8 @@ angular.module('myApp', [
     'myApp.login',
     'myApp.signUp',
     'myApp.letters',
+    'myApp.pending_letters',
+    'myApp.suggest_help'
     //'myApp.view1',
     //'myApp.view2',
     //'myApp.version'
@@ -39,18 +41,18 @@ angular.module('myApp', [
             .when('/nicola_around', {
                 templateUrl: 'views/nicola_around.html'
             })
-            .when('/gift', {
-                templateUrl: 'views/gift.html'
-            })
+            //.when('/gift', {
+            //    templateUrl: 'views/gift.html'
+            //})
             .when('/action', {
                 templateUrl: 'views/action.html'
             })
             //.when('/letters', {
             //    templateUrl: 'views/letters.html'
             //})
-            .when('/give_gift', {
-                templateUrl: 'views/give_gift.html'
-            })
+            //.when('/give_gift', {
+            //    templateUrl: 'views/give_gift.html'
+            //})
             .when('/1996_97', {
                 templateUrl: 'views/Leters/1996_97.html'
     })

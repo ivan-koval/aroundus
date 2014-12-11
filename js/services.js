@@ -1,11 +1,20 @@
 var aroundUsServices = angular.module('myApp.aroundUsServices', []);
-var endpoint = 'http://aroundus-api.vakoms.com';
+//var endpoint = 'http://aroundus-api.vakoms.com';
 //var endpoint = 'http://localhost:8080';
-//var endpoint = 'http://91.237.240.22:8080';
+var endpoint = 'http://91.237.240.22:8080';
 
 aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
   function getLetters(years, success, error) {
     $http.post(endpoint + '/letters', {"years": years}).success(success).error(error);
+  }
+  function suggestHelp(data, success, error) {
+    $http.post(endpoint + '/suggest_help', data).success(success).error(error);
+  }
+  function getPending(success, error) {
+    $http.get(endpoint + '/pending').success(success).error(error);
+  }
+  function getDetails(id, success, error) {
+    $http.get(endpoint + '/details/'+id).success(success).error(error);
   }
   function register(user, success, error) {
     $http.post(endpoint + '/register', user).success(success).error(error);
@@ -51,6 +60,9 @@ aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
     getLetters: getLetters,
     login: login,
     logout: logout,
-    checkLoginStatus: checkLoginStatus
+    checkLoginStatus: checkLoginStatus,
+    getPending: getPending,
+    getDetails: getDetails,
+    suggestHelp: suggestHelp
   }
 });

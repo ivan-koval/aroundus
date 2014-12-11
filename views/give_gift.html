@@ -19,27 +19,25 @@
             <div class="caption text-justify ">
                 <h3></h3>
 
-                <p>Святий Миколаю! Я вас прошу і благаю принесіть
-                    подарунок з божого раю трансформера.
-                </p>
+                <p>{{letter.text}}</p>
             </div>
         </div>
     </div>
     <div class="col-sm-4 col-md-4">
         <div class="thumbnail">
             <div class="caption text-center">
-                <h3> Ключові слова</h3>
+                <h3>Ключові слова</h3>
 
-                <p>Трансформер </p>
+                <p>{{letter.tags.join(', ')}}</p>
             </div>
         </div>
     </div>
     <div class="col-sm-4 col-md-4">
         <div class="thumbnail">
             <div class="caption  text-center">
-                <h3> Примітки</h3>
+                <h3>Примітки</h3>
 
-                <p>Хлопчик, 10 років </p>
+                <p>{{letter.name + ' ' + letter.age}} років </p>
             </div>
         </div>
     </div>
@@ -51,13 +49,14 @@
         <div class="thumbnail">
             <div class="caption text-center">
                 <h3> Запитання, пропозиції</h3>
-                <input textarea autofocus rows="5" class="form-control"> </textarea>
+                <textarea ng-model="message" autofocus rows="5" class="form-control"> </textarea>
 
                 <br>
 
                 <p>
-                    <a href="/#/modal" class="btn btn-primary center-block margin-top:10px " role="alert">
+                    <a ng-click='help()' class="btn btn-primary center-block" role="alert">
                         <span class="glyphicon glyphicon-envelope"></span> Допомогти дитині
+                        <i class="fa fa-spinner fa-spin" ng-show="loading"></i>
                     </a>
 
                 </p>
