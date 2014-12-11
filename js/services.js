@@ -1,7 +1,7 @@
 var aroundUsServices = angular.module('myApp.aroundUsServices', []);
-//var endpoint = 'http://aroundus-api.vakoms.com';
+var endpoint = 'http://aroundus-api.vakoms.com';
 //var endpoint = 'http://localhost:8080';
-var endpoint = 'http://91.237.240.22:8080';
+//var endpoint = 'http://91.237.240.22:8080';
 
 aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
   function getLetters(years, success, error) {
