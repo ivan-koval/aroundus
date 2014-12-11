@@ -21,7 +21,6 @@
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body ng-controller="MainCtrl">
-<div class="container">
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -35,20 +34,22 @@
             <a class="navbar-brand" href="#">Around Us</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/#/nicola">Хто такий Миколай?</a></li>
                 <li><a href="/#/nicola_around">Миколай у світі</a></li>
                 <li><a href="/#/gift">Вибрати лист</a> </li>
-                <!--<li><a href="/#/action">Заходи, акції</a> </li>-->
+                <li><a href="/#/action">Заходи, акції</a> </li>
                 <li><a href="/#/letters">Архів листів</a></li>
                 <li><a ng-show='!user' ng-click="login()">Увійти</a></li>
-                <li><a ng-show='!user' ng-click="signUp()">Р</a></li>
+                <li><a ng-show='!user' ng-click="signUp()">Реєстрація</a></li>
                 <li><a ng-show='user' ng-click="logout()">Вийти</a></li>
             </ul>
-          </div>
+        </div>
     </div>
 </nav>
+<div class="container">
+
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
