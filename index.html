@@ -43,6 +43,7 @@
                 <li><a href="/#/letters">Архів листів</a></li>
                 <li><a ng-show='!user' ng-click="login()">Увійти</a></li>
                 <li><a ng-show='!user' ng-click="signUp()">Реєстрація</a></li>
+                <li><a ng-show='user && user.type == "admin"' href="/#/add_letter">Додати лист</a></li>
                 <li><a ng-show='user' ng-click="logout()">Вийти</a></li>
             </ul>
         </div>
@@ -84,5 +85,6 @@
 <script src="js/controllers/letters_ctrl.js"></script>
 <script src="js/controllers/pending_letters.js"></script>
 <script src="js/controllers/suggest_help.js"></script>
+<script src="js/controllers/add_letter.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@
                         </p>
 
                         <a href="/#/gift/{{letter.id}}" class="btn btn-primary center-block" role="button">Зробити подарунок</a>
+                        <a ng-show='user && user.type == "admin"' ng-click="delete(letter.id)" class="btn btn-sm btn-warning center-block" role="button">Видалити</a>
 
                     </div>
                 </div>

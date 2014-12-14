@@ -11,7 +11,8 @@ angular.module('myApp', [
     'myApp.signUp',
     'myApp.letters',
     'myApp.pending_letters',
-    'myApp.suggest_help'
+    'myApp.suggest_help',
+    'myApp.add_letter'
     //'myApp.view1',
     //'myApp.view2',
     //'myApp.version'

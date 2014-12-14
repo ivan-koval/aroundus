@@ -42,6 +42,8 @@ angular.module('myApp.suggest_help', [/*special components here*/])
       }
     };
 
+
+
     //$scope.readMore = function(text){
     //  $modal.open({
     //    templateUrl: 'views/modals/letter_read_more.html',

@@ -1,0 +1,54 @@
+<div class="page-header" align="center">
+    <div class="row">
+        <div class="col-xs-3">
+            <img width="100" alt="Емблема" src="/img/4415.jpg" border="0">
+        </div>
+        <div class="col-xs-9">
+            <h1>Оформлення листа
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-xs-6 col-md-6">
+        <a href="#" class="thumbnail">
+            <img width="400" src="img/letter.jpg" alt="leter" border="0">
+        </a>
+        <h4 align="center">Примітки</h4>
+        <textarea class="form-control" rows="2" ng-model="letter.remarks" placeholder="Введіть примітки"></textarea>
+    </div>
+    <div class="col-xs-6 col-md-6">
+        <h4 align="center">Ключові слова</h4>
+        <input type="keyword" ng-model='letter.keywords' class="form-control" id="exampleInputWord" placeholder="Введіть ключові слова">
+        <h4 align="center">Текст листа</h4>
+        <textarea class="form-control" rows="6" ng-model="letter.text" placeholder="Ввудіть текст листа"></textarea>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h4 align="center">Дитина</h4>
+                <input type="keyword" class="form-control" ng-model='letter.name' placeholder="Введіть прізвище та ім'я дитини">
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 col-md-6">
+                <h4 align="center">Рік листа</h4>
+                <input type="number" min="1900" max="2014" ng-model="letter.year" class="form-control" placeholder="Введіть дату">
+                </div>
+            <div class="col-xs-3 col-md-6">
+                <h4 align="center">Вік дитини</h4>
+                <input type="number" class="form-control" ng-model="letter.age" placeholder="Введіть вік дитини"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3 col-md-6">
+                <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="add()">Додати лист</button>
+            </div>
+            <div class="col-xs-3 col-md-6">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Видалити лист</button>
+            </div>
+        </div>
+    </div>
+</div>
+

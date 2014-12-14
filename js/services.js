@@ -10,6 +10,12 @@ aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
   function suggestHelp(data, success, error) {
     $http.post(endpoint + '/suggest_help', data).success(success).error(error);
   }
+  function addLetter(data, success, error) {
+    $http.post(endpoint + '/add_letter', data).success(success).error(error);
+  }
+  function deleteLetter(id, success, error) {
+    $http.get(endpoint + '/delete_letter/'+id).success(success).error(error);
+  }
   function getPending(success, error) {
     $http.get(endpoint + '/pending').success(success).error(error);
   }
@@ -63,6 +69,8 @@ aroundUsServices.factory('AroundUsService', function($http, $rootScope) {
     checkLoginStatus: checkLoginStatus,
     getPending: getPending,
     getDetails: getDetails,
-    suggestHelp: suggestHelp
+    suggestHelp: suggestHelp,
+    addLetter: addLetter,
+    deleteLetter: deleteLetter
   }
 });
